@@ -1,62 +1,20 @@
 <!doctype html>
 <html lang="ja">
-<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#000000">
-<meta name="description" content="A VOID DANCER のプレイテスト。リズムに合わせて攻撃し、幾何図形の弾幕を避ける。">
-<title>A VOID DANCER</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ffca2e' d='M5 5h22v22H5z'/%3E%3C/svg%3E">
+<title>A VOID DANCER — Windows プレイテスト</title>
 <style>
-*{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;background:#000;color:#f5f3eb;font-family:system-ui,sans-serif}
-body{min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center}
-main{width:min(100vw,calc((100dvh - 44px)*16/9));aspect-ratio:16/9;position:relative;background:#000}
-canvas{display:block;width:100%;height:100%;outline:none}
-#loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px;background:#000}
-#loading[hidden]{display:none}h1{font-size:clamp(20px,4vw,38px);font-weight:300;letter-spacing:.16em;margin:0;text-align:center}
-.track{width:min(300px,70%);height:2px;background:#251b36}.fill{height:100%;background:#ffca2e;width:0;transition:width .15s}
-#status{font-size:14px;color:#a29baa;margin:0 18px;text-align:center}footer{min-height:44px;display:flex;align-items:center;justify-content:space-between;width:min(100%,1280px);gap:20px;padding:8px 20px;font-size:12px;color:#82798c}
-footer a,button{color:#ada4b8;background:none;border:0;font:inherit;text-decoration:none;padding:4px;cursor:pointer}
-footer a:hover,button:hover,footer a:focus-visible,button:focus-visible{color:#ffca2e;outline:1px solid #ffca2e}
-footer nav{display:flex;gap:14px}button:disabled{opacity:.3;cursor:default}
-@media(max-width:600px){footer{font-size:11px;padding:8px}footer nav{gap:6px}}
+*{box-sizing:border-box}body{margin:0;background:#08060b;color:#f5f3eb;font-family:system-ui,sans-serif;min-height:100vh;display:grid;place-items:center;padding:32px}main{max-width:720px;width:100%;border-top:1px solid #9e64df;padding-top:28px}h1{font-size:clamp(32px,7vw,64px);letter-spacing:.09em;font-weight:300;margin:10px 0 30px}.tag{color:#b296ca;letter-spacing:.2em;font-size:13px}p,li{line-height:1.9;color:#bbb4c4}a{color:#ffca2e}.download{display:inline-block;border:1px solid #ffca2e;padding:16px 24px;text-decoration:none;font-weight:600;margin:12px 0;clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);background:linear-gradient(110deg,#302711,#121014)}.download:hover,.download:focus-visible{background:#443512;outline:2px solid #ffca2e}footer{border-top:1px solid #382744;margin-top:36px;padding-top:20px;font-size:13px;color:#a294ae}
 </style>
-</head>
-<body>
-<main id="game">
-<canvas id="unity-canvas" width="1280" height="720" tabindex="0" aria-label="A VOID DANCER ゲーム画面"></canvas>
-<div id="loading" role="status" aria-live="polite">
-<h1>A VOID DANCER</h1><div class="track"><div id="progress" class="fill"></div></div>
-<p id="status">読み込み中…</p>
-</div>
+<main>
+<div class="tag">WINDOWS x64 · PLAYTEST</div>
+<h1>A VOID DANCER</h1>
+<a class="download" href="https://github.com/lunachil32/dancer-playtest/releases/latest/download/A-VOID-DANCER-Windows-x64.zip">Windows版をダウンロード</a>
+<p>ZIPを「すべて展開」し、フォルダー内の <strong>A-VOID-DANCER.exe</strong> を起動してください。インストールは不要です。</p>
+<p>初回は音量設定から始められます。まずはチュートリアルからどうぞ。</p>
+<p>Web版の音声接続・リズム同期の問題を受け、Windows版へ移行しました。</p>
+<p><a href="https://github.com/lunachil32/dancer-playtest#操作">操作・クレジット</a> · <a href="https://github.com/lunachil32/dancer-playtest/releases/latest">リリース情報</a> · <a href="https://github.com/lunachil32/dancer-playtest/issues">感想・不具合</a></p>
+<footer>BGM: ISAo / <a href="https://airyluvs.com">SOUND AIRYLUVS</a> · New Classic Retro Synthwave</footer>
 </main>
-<footer><span>PLAYTEST · 2026.09.23-1651</span><nav>
-<a href="https://github.com/lunachil32/dancer-playtest#操作" target="_blank" rel="noopener">操作</a>
-<a href="https://github.com/lunachil32/dancer-playtest#クレジット" target="_blank" rel="noopener">クレジット</a>
-<button id="fullscreen" type="button" disabled>全画面</button>
-</nav></footer>
-<script>
-const canvas=document.getElementById("unity-canvas");
-const statusLabel=document.getElementById("status");
-const loading=document.getElementById("loading");
-const config={"dataUrl": "Build/webgl-playtest.data.unityweb?v=b526c846e595", "frameworkUrl": "Build/webgl-playtest.framework.js.unityweb?v=6d138689bcd8", "codeUrl": "Build/webgl-playtest.wasm.unityweb?v=48820d2335a3", "companyName": "lunachil32", "productName": "A VOID DANCER", "productVersion": "2026.09.23-1651"};
-config.devicePixelRatio=Math.min(window.devicePixelRatio||1,1.5);
-config.autoSyncPersistentDataPath=true;
-config.showBanner=(message,type)=>{if(type==="error"){loading.hidden=false;statusLabel.textContent="読み込みエラー: "+message;}else console.warn(message);};
-const script=document.createElement("script");
-script.src="Build/webgl-playtest.loader.js?v=0cc95b9e7e03";
-script.onerror=()=>{statusLabel.textContent="読み込みに失敗しました。ページを再読み込みしてください。";};
-script.onload=()=>createUnityInstance(canvas,config,progress=>{
- document.getElementById("progress").style.width=(progress*100)+"%";
- statusLabel.textContent=progress<.9?"読み込み中… "+Math.round(progress*100)+"%":"ゲームを準備しています…";
-}).then(instance=>{
- loading.hidden=true;
- canvas.focus({preventScroll:true});
- const fullscreen=document.getElementById("fullscreen");
- fullscreen.disabled=false;
- fullscreen.addEventListener("click",()=>{instance.SetFullscreen(1);canvas.focus();});
-}).catch(error=>{loading.hidden=false;statusLabel.textContent="起動できませんでした。PCのChrome / Edge / Firefoxで再度お試しください。";console.error(error);});
-document.body.appendChild(script);
-</script>
-</body>
 </html>
