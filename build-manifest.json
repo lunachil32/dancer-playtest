@@ -1,0 +1,50 @@
+{
+  "version": "2026.09.23-1651",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 20,
+      "sha256": "2bdfdb216230559f36faf46907142b8afd478401150f810e1ddaf9a4fdcc656c"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Build/webgl-playtest.data.unityweb",
+      "bytes": 16759699,
+      "sha256": "b526c846e59582fb084bbc38b08ebd56ebb4e9f8c0b217e339ddff3df0fec68f"
+    },
+    {
+      "path": "Build/webgl-playtest.framework.js.unityweb",
+      "bytes": 75387,
+      "sha256": "6d138689bcd869eb9eccca4c4bd3d974e618123eaaf961ecc27fe63dbd6b44e7"
+    },
+    {
+      "path": "Build/webgl-playtest.loader.js",
+      "bytes": 117893,
+      "sha256": "0cc95b9e7e0345b0cec029cf68e01d692831e9dd9569d5cbf57336ed21f8a1d9"
+    },
+    {
+      "path": "Build/webgl-playtest.wasm.unityweb",
+      "bytes": 6348440,
+      "sha256": "48820d2335a3686cf0f2f204d111aa606e3dddadc0cbaf827156b232342d62e6"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4396,
+      "sha256": "c6f552e9f0a7287cfaf4c85bcb64fbda4d951af8fe2cc1c0c1e1fb7221aa1faa"
+    },
+    {
+      "path": "LICENSES/NotoSansJP-OFL.txt",
+      "bytes": 4444,
+      "sha256": "857c9cfe99da9b1cb313234885d0909f4d36545410bb6e6d6b944340d1331d91"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2373,
+      "sha256": "69aeb12519b649535b82b451bd73e367db0a7ab2cdd2f6dea342556c21c69688"
+    }
+  ]
+}
