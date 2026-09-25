@@ -1,10 +1,16 @@
 # A VOID DANCER
 
+**[ブラウザで遊ぶ](https://lunachil32.github.io/dancer-playtest/)**
+
 **[Windows版をダウンロード](https://github.com/lunachil32/dancer-playtest/releases/latest/download/A-VOID-DANCER-Windows-x64.zip)**
 
-リズムに合わせて攻撃しながら弾幕を避けるゲーム。Windows 64bit向けです。
+リズムに合わせて攻撃しながら弾幕を避けるゲーム。ブラウザ版とWindows 64bit版があります。
 
 ## 遊び方
+
+ブラウザ版は上の「ブラウザで遊ぶ」から起動できます。初回は音を出す前に音量設定を選べます。
+
+Windows版は以下の手順で起動します。
 
 1. 上のリンクからZIPをダウンロードします。
 2. ZIPを右クリックし「すべて展開」を選びます。
