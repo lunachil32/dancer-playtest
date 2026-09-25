@@ -1,6 +1,11 @@
 {
-  "version": "2026.09.25-0450",
+  "version": "2026.09.25-0719",
   "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 20,
+      "sha256": "2bdfdb216230559f36faf46907142b8afd478401150f810e1ddaf9a4fdcc656c"
+    },
     {
       "path": ".nojekyll",
       "bytes": 0,
@@ -8,28 +13,28 @@
     },
     {
       "path": "Build/webgl-pcm-release.data.unityweb",
-      "bytes": 75477160,
-      "sha256": "5325af3a47d229df07f15b27c1aa21ea035d942b1908c8aea847048f7590ae74"
+      "bytes": 75474567,
+      "sha256": "4e94495c788ca555d6be75c24ea7af0190277c745188ea71b806db7b7b609ec8"
     },
     {
       "path": "Build/webgl-pcm-release.framework.js.unityweb",
-      "bytes": 80594,
-      "sha256": "783bfb722725a3943c7bbf79cfc91315e9bfc25a3871ccfc1b37022a4b5a3e7d"
+      "bytes": 80551,
+      "sha256": "e667e24c8d8b1322e6e43e9a4c8588d7d9bcc11ebdb1925754988e3cd74210e1"
     },
     {
       "path": "Build/webgl-pcm-release.loader.js",
       "bytes": 117893,
-      "sha256": "c52859d01f13d219b79f0cfdbdc5f662a8a83f7734d2961dfc7c567c98a06f69"
+      "sha256": "6ae2bef0099f830f9775d872aecdbdc9c3bb755f1f6955d375ab91b5bbf30162"
     },
     {
       "path": "Build/webgl-pcm-release.wasm.unityweb",
-      "bytes": 6777111,
-      "sha256": "69d6d2c34cc0aa647aa25e872bc1578fd23c0f9512b5d4c2503ab5f1637d73e6"
+      "bytes": 6789046,
+      "sha256": "24409661b8aef977433eea162c5b24f060246487d6625fa015777181fd0a8c38"
     },
     {
       "path": "index.html",
       "bytes": 4408,
-      "sha256": "56a184e32f17a2427732e009ba1af20713b45a5b654b62504cf1200ad2b15950"
+      "sha256": "4212cadd1103bc1d9ef58dbdcdf665f47fe824f484b6440936b7c31c3b89bcf3"
     },
     {
       "path": "LICENSES/FMOD-LICENSE.txt",
@@ -45,11 +50,6 @@
       "path": "README.md",
       "bytes": 2251,
       "sha256": "211a176897d413e8eb0e4fcc96d65db075541c14ee5fcd6a2ca23c253e82e387"
-    },
-    {
-      "path": ".gitignore",
-      "bytes": 20,
-      "sha256": "2bdfdb216230559f36faf46907142b8afd478401150f810e1ddaf9a4fdcc656c"
     }
   ]
 }

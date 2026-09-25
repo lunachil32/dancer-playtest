@@ -30,7 +30,7 @@ footer nav{display:flex;gap:14px}button:disabled{opacity:.3;cursor:default}
 <p id="status">読み込み中…</p>
 </div>
 </main>
-<footer><span>PLAYTEST · 2026.09.25-0450</span><nav>
+<footer><span>PLAYTEST · 2026.09.25-0719</span><nav>
 <a href="https://github.com/lunachil32/dancer-playtest#操作" target="_blank" rel="noopener">操作</a>
 <a href="https://github.com/lunachil32/dancer-playtest#クレジット" target="_blank" rel="noopener">クレジット</a>
 <button id="fullscreen" type="button" disabled>全画面</button>
@@ -39,12 +39,12 @@ footer nav{display:flex;gap:14px}button:disabled{opacity:.3;cursor:default}
 const canvas=document.getElementById("unity-canvas");
 const statusLabel=document.getElementById("status");
 const loading=document.getElementById("loading");
-const config={"dataUrl": "Build/webgl-pcm-release.data.unityweb?v=5325af3a47d2", "frameworkUrl": "Build/webgl-pcm-release.framework.js.unityweb?v=783bfb722725", "codeUrl": "Build/webgl-pcm-release.wasm.unityweb?v=69d6d2c34cc0", "companyName": "lunachil32", "productName": "A VOID DANCER", "productVersion": "2026.09.25-0450"};
+const config={"dataUrl": "Build/webgl-pcm-release.data.unityweb?v=4e94495c788c", "frameworkUrl": "Build/webgl-pcm-release.framework.js.unityweb?v=e667e24c8d8b", "codeUrl": "Build/webgl-pcm-release.wasm.unityweb?v=24409661b8ae", "companyName": "lunachil32", "productName": "A VOID DANCER", "productVersion": "2026.09.25-0719"};
 config.devicePixelRatio=Math.min(window.devicePixelRatio||1,1.5);
 config.autoSyncPersistentDataPath=true;
 config.showBanner=(message,type)=>{if(type==="error"){loading.hidden=false;statusLabel.textContent="読み込みエラー: "+message;}else console.warn(message);};
 const script=document.createElement("script");
-script.src="Build/webgl-pcm-release.loader.js?v=c52859d01f13";
+script.src="Build/webgl-pcm-release.loader.js?v=6ae2bef0099f";
 script.onerror=()=>{statusLabel.textContent="読み込みに失敗しました。ページを再読み込みしてください。";};
 script.onload=()=>createUnityInstance(canvas,config,progress=>{
  document.getElementById("progress").style.width=(progress*100)+"%";
